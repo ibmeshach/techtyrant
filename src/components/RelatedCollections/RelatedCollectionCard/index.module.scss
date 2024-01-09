@@ -1,0 +1,75 @@
+@use "../../../_css/queries.scss" as *;
+
+.card {
+  position: relative;
+  min-height: 360px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.image {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-dark-50);
+  padding: 20px;
+  height: 100%;
+  img {
+    width: 50%;
+  }
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.subText {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.2rem;
+}
+
+.title {
+  display: flex;
+  text-align: left;
+  background-color: white;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.description {
+  display: flex;
+  text-align: left;
+  background-color: white;
+  font-size: 15px;
+}
+
+.price {
+  display: flex;
+  text-align: left;
+  background-color: white;
+  font-size: 15px;
+}
+
+.title,
+.description,
+.price {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* Number of lines to show */
+  -webkit-box-orient: vertical;
+  max-height: 1.5em; /* Adjust to control the height of one line */
+  width: 300px; /* Limit the width to enable ellipsis */
+}
